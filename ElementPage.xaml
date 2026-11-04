@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projekt_Wlasny.ElementPage"
+             Title="ElementPage">
+    <VerticalStackLayout
+        Spacing="15">
+        <Entry
+            x:Name="nameEntry"
+            Placeholder="Tu wpisz nazwe"/>
+        
+        <Image
+            Source="dotnet_bot.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+        <Label
+            x:Name="counterLabel"
+            Text="Kliknij przycisk aby rozpoczac"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1" />
+
+        <Button
+            Text="+" 
+            Clicked="IncrementCounter"
+            HorizontalOptions="Fill" />
+
+        <Button
+            Text="-"
+            Clicked="DecrementCounter"
+            HorizontalOptions="Fill"/>
+
+        <Button
+            Text="Strona główna"
+            Clicked="GoBack" />
+    </VerticalStackLayout>
+</ContentPage>
