@@ -1,3 +1,4 @@
+using Projekt_Wlasny.Models;
 using System.Collections.ObjectModel;
 
 namespace Projekt_Wlasny;

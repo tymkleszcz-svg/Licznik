@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Text.Json;
 
-namespace Projekt_Wlasny;
+namespace Projekt_Wlasny.Models;
 
 public class CounterStorage
 {

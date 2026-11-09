@@ -1,15 +1,11 @@
-﻿using System.Collections.ObjectModel;
+﻿using Projekt_Wlasny.Models;
+using System.Collections.ObjectModel;
 using System.Diagnostics.Metrics;
 using System.Text.Json;
+using Projekt_Wlasny.Models;
 
 namespace Projekt_Wlasny
 {
-    public class Counter
-    {
-        public string name { set; get; }
-        public int clickCount { set; get; }
-    }
-
     public partial class MainPage : ContentPage
     {
         ObservableCollection<Counter> counters = new ObservableCollection<Counter>();
@@ -28,13 +24,18 @@ namespace Projekt_Wlasny
             }
         }
 
-        private void AddCounter(object sender, EventArgs e)
+        private async void AddCounter(object sender, EventArgs e)
         {
             int initialValue = 0;
 
             if (!int.TryParse(initialValueEntry.Text, out initialValue))
             {
-                initialValue = 0;
+                await DisplayAlert(
+                    "Błąd",
+                    "Podaj poprawną wartość początkową licznika (liczbę całkowitą).",
+                    "OK");
+
+                return;
             }
 
             Counter newCounter = new Counter

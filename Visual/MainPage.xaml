@@ -14,8 +14,7 @@
 
             <Entry
                 x:Name="initialValueEntry"
-                Placeholder="Wartość początkowa"
-                Keyboard="Numeric" />
+                Placeholder="Wartość początkowa" />
 
             <Button
                 Text="Dodaj nowy licznik"
